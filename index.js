@@ -20,6 +20,7 @@ const productSchema = new mongoose.Schema({
     name: String,
     price: Number,
     category: String,
+    image: String,
     inStock: Boolean
 });
 const Product = mongoose.model('Product', productSchema);
@@ -112,8 +113,5 @@ app.delete('/api/products/:id', async (req, res) => {
     }
 });
 
-app.get('/', (req, res) => {
-    res.send('Welcome to the E-commerce API!');
-});
 
 app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`));
