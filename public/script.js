@@ -19,6 +19,7 @@ async function displayProducts() {
             card.className = 'product-card';
             card.innerHTML = `
                 <button class="delete-btn" onclick="deleteProduct('${product._id}')">×</button>
+                <img src="${product.image}" alt="${product.name}" class="product-img">
                 <h3>${product.name}</h3>
                 <span class="category-tag">${product.category}</span>
                 <p class="price">$${product.price}</p>
@@ -37,11 +38,13 @@ async function addProduct() {
     const name = document.getElementById('name').value;
     const price = document.getElementById('price').value;
     const category = document.getElementById('category').value;
+    const imageUrl = document.getElementById('imageUrl').value;
 
     const newProduct = {
         name: name,
         price: parseFloat(price),
         category: category,
+        image: imageUrl || 'https://via.placeholder.com/150', // Default image if empty
         inStock: true
     };
 
