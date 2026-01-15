@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My E-Commerce Store</title>
+    <style>
+        body { font-family: sans-serif; display: flex; flex-wrap: wrap; gap: 20px; padding: 20px; background: #f4f4f4; }
+        .product-card { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); width: 200px; }
+        .price { color: green; font-weight: bold; }
+        h1 { width: 100%; }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="admin-panel">
+        <h2>Add New Product</h2>
+        <input type="text" id="name" placeholder="Product Name">
+        <input type="number" id="price" placeholder="Price">
+        <input type="text" id="category" placeholder="Category">
+        <button onclick="addProduct()">Save Product</button>
+        <div class="stats-box">
+        <h3>Inventory Summary</h3>
+        <p>Total Items: <span id="totalItems">0</span></p>
+        <p>Total Value: $<span id="totalValue">0.00</span></p>
+</div>
+    </div>
+
+    <div class="main-content">
+        <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search products by name..." onkeyup="searchProducts()">
+    </div>
+        <h1>Our Catalog</h1>
+        <div id="product-list"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

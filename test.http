@@ -1,0 +1,40 @@
+POST http://localhost:3000/api/orders
+Content-Type: application/json
+
+{
+    "productName": "Mechanical Keyboard",
+    "quantity": 1
+}
+
+### Create a New Product
+POST http://localhost:3000/api/products
+Content-Type: application/json
+
+{
+    "name": "Wireless Mouse",
+    "price": 25.99,
+    "category": "Accessories",
+    "inStock": true
+}
+
+### Create a New Product
+POST http://localhost:3000/api/products
+Content-Type: application/json
+
+{
+    "name": "Wireless Keyboard",
+    "price": 30.99,
+    "category": "Accessories",
+    "inStock": true
+}
+
+### Create a New Product
+POST http://localhost:3000/api/products
+Content-Type: application/json
+
+{
+    "name": "Gaming Mouse",
+    "price": 49.99,
+    "category": "Accessories",
+    "inStock": true
+}
